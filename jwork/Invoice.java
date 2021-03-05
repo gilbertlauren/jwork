@@ -31,10 +31,8 @@ public class Invoice
     }
     public void setIdJobs(int idJobs) {
     }
-    public String setDate (String date) {
-        return "oop";
+    public void setDate (String date) {
     }
-    public int setTotalFee (int totalFee) {
-        return 0;
+    public void setTotalFee (int totalFee) {
     }
 }
