@@ -1,38 +1,52 @@
-
 /**
- * Write a description of class Invoice here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Gilbert Lauren
+ * @version 18 Maret 2021
  */
 public class Invoice
 {
-    // instance variables - replace the example below with your own
     private int id, idJob, totalFee;
     private String date;
+    private Jobseeker jobseeker;
     /**
      * Constructor for objects of class Invoice
      */
-    public Invoice() {
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker) {
+        this.id = id;
+        this.idJob = idJob;
+        this.date = date;
+        this.totalFee = totalFee;
+        this.jobseeker = jobseeker;
     }
     public int getId() {
-        return 0;
+        return id;
     }
     public int getIdJob() {
-        return 0;
+        return idJob;
     }
     public String getDate() {
-        return "oop";
+        return date;
     }
     public int getTotalFee() {
-        return 0;
+        return totalFee;
+    }
+    public Jobseeker getJobseeker() {
+        return jobseeker;
     }
     public void setId(int id) {
+        this.id = id;
     }
     public void setIdJobs(int idJobs) {
+        this.idJob = idJob;
     }
     public void setDate (String date) {
+        this.date = date;
     }
     public void setTotalFee (int totalFee) {
+        this.totalFee = totalFee;
+    }
+    public void setJobseeker (Jobseeker jobseeker) {
+        this.jobseeker = jobseeker;
+    }
+    public void printdata(){
     }
 }

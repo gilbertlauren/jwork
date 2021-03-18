@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=DatabaseJob
+comment0.text=\r\n\ @author\ Gilbert\ Lauren\r\n\ @version\ 18\ Maret\ 2021\r\n
+comment1.params=
+comment1.target=DatabaseJob()
+comment2.params=listjob
+comment2.target=DatabaseJob(java.lang.String[])
+comment3.params=job
+comment3.target=boolean\ addJob(Job)
+comment4.params=job
+comment4.target=boolean\ removeJob(Job)
+comment5.params=
+comment5.target=Job\ getJob()
+comment6.params=
+comment6.target=java.lang.String[]\ getListJob()
+numComments=7
