@@ -5,17 +5,18 @@
 public class Invoice
 {
     private int id, idJob, totalFee;
-    private String date;
+    private String date, age;
     private Jobseeker jobseeker;
     /**
      * Constructor for objects of class Invoice
      */
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker) {
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, String age) {
         this.id = id;
         this.idJob = idJob;
         this.date = date;
         this.totalFee = totalFee;
         this.jobseeker = jobseeker;
+        this.age = age;
     }
     public int getId() {
         return id;
@@ -32,6 +33,9 @@ public class Invoice
     public Jobseeker getJobseeker() {
         return jobseeker;
     }
+    public String getage() {
+        return age;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -46,6 +50,9 @@ public class Invoice
     }
     public void setJobseeker (Jobseeker jobseeker) {
         this.jobseeker = jobseeker;
+    }
+    public void setage (String age) {
+        this.age = age;
     }
     public void printData(){
         // Menampilkan perintah print untuk jumlah gaji
