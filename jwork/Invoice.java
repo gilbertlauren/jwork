@@ -47,6 +47,8 @@ public class Invoice
     public void setJobseeker (Jobseeker jobseeker) {
         this.jobseeker = jobseeker;
     }
-    public void printdata(){
+    public void printData(){
+        // Menampilkan perintah print untuk jumlah gaji
+        System.out.println("Gaji      :" + getTotalFee());
     }
 }

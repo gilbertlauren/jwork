@@ -6,17 +6,18 @@
 public class Job
 {
     private int id, fee;
-    private String name, category;
+    private String name, category, born;
     private Recruiter recruiter;
     /**
      * Constructor for objects of class Job
      */
-    public Job(int id, String name, Recruiter recruiter, int fee, String category) {
+    public Job(int id, String name, Recruiter recruiter, int fee, String category, String born) {
         this.id = id;
         this.name = name;
         this.recruiter = recruiter;
         this.fee = fee;
         this.category = category;
+        this.born = born;
     }
     public int getId() {
         return id;
@@ -33,6 +34,9 @@ public class Job
     public Recruiter getRecruiter() {
         return recruiter;
     }
+    public String getBorn() {
+        return born;
+    }
     public void setId (int id) {
         this.id = id;
     }
@@ -48,6 +52,11 @@ public class Job
     public void setCategory (String category) {
         this.category = category;
     }
+    public void setBorn (String born) {
+        this.born = born;
+    }
     public void printData() {
+        // Menampilkan perintah print untuk nama pekerjaan
+        System.out.println("Pekerjaan :" + getName());
     }
 }

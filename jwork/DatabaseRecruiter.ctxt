@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=DatabaseRecruiter
+comment0.text=\r\n\ @author\ Gilbert\ Lauren\r\n\ @version\ 20\ Maret\ 2021\r\n
+comment1.params=
+comment1.target=DatabaseRecruiter()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ DatabaseRecruiter\r\n
+comment2.params=recruiter
+comment2.target=boolean\ addRecruiter(Recruiter)
+comment3.params=recruiter
+comment3.target=boolean\ removeRecruiter(Recruiter)
+comment4.params=
+comment4.target=Recruiter\ getJob()
+comment5.params=
+comment5.target=java.lang.String[]\ getListRecruiter()
+numComments=6
