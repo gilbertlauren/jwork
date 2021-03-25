@@ -5,23 +5,18 @@
  */
 public class DatabaseRecruiter
 {
-    private String[] listRecruiter;
+    private static String[] listRecruiter;
 
-    /**
-     * Constructor for objects of class DatabaseRecruiter
-     */
-    public DatabaseRecruiter() {
-    }
-    public boolean addRecruiter(Recruiter recruiter) {
+    public static boolean addRecruiter(Recruiter recruiter) {
         return false;
     }
-    public boolean removeRecruiter(Recruiter recruiter) {
+    public static boolean removeRecruiter(Recruiter recruiter) {
         return false;
     }
-    public Recruiter getJob() {
+    public static Recruiter getRecruiter() {
         return null;
     }
-    public String[] getListRecruiter() {
+    public static String[] getListRecruiter() {
         return null;
     }
 }

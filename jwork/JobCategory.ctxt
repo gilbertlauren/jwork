@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=JobCategory
+comment0.text=\r\n\ Enumeration\ class\ JobCategory\ -\ write\ a\ description\ of\ the\ enum\ class\ here\r\n\r\n\ @author\ Gilbert\ Lauren\r\n\ @version\ 25\ Maret\ 2021\r\n
+comment1.params=name
+comment1.target=JobCategory(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3
