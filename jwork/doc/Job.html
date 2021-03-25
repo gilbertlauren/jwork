@@ -131,6 +131,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Job</span>
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
+<div class="block">Merupakan file class untuk Job</div>
 <dl>
 <dt><span class="simpleTagLabel">Version:</span></dt>
 <dd>18 Maret 2021</dd>
@@ -157,12 +158,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,java.lang.String,Recruiter,int,java.lang.String,java.lang.String)">Job</a></span>&#8203;(int&nbsp;id,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,java.lang.String,Recruiter,int,java.lang.String,JobCategory)">Job</a></span>&#8203;(int&nbsp;id,
    <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
    <a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a>&nbsp;recruiter,
    int&nbsp;fee,
-   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;category,
-   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born)</code></th>
+   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born,
+   <a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a>&nbsp;category)</code></th>
 <td class="colLast">
 <div class="block">Constructor for objects of class Job</div>
 </td>
@@ -188,67 +189,90 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBorn()">getBorn</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan getter born dari Job</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<td class="colFirst"><code><a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCategory()">getCategory</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFee()">getFee</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan getter Fee dari Job</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan getter Id dari Job</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan getter Name dari Job</div>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRecruiter()">getRecruiter</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan getter Recruiter dari Job</div>
+</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printData()">printData</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#JobCategory(JobCategory)">JobCategory</a></span>&#8203;(<a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a>&nbsp;category)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBorn(java.lang.String)">setBorn</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born)</code></th>
-<td class="colLast">&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printData()">printData</a></span>()</code></th>
+<td class="colLast">
+<div class="block">method untuk print dari job
+ outputnya adalah berupa nama pekerjaan</div>
+</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCategory(java.lang.String)">setCategory</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;category)</code></th>
-<td class="colLast">&nbsp;</td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBorn(java.lang.String)">setBorn</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born)</code></th>
+<td class="colLast">
+<div class="block">merupakan setter born dari job</div>
+</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFee(int)">setFee</a></span>&#8203;(int&nbsp;fee)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan setter fee dari job</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setId(int)">setId</a></span>&#8203;(int&nbsp;id)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan setter id dari job</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setName(java.lang.String)">setName</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan setter name dari job</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRecruiter(Recruiter)">setRecruiter</a></span>&#8203;(<a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a>&nbsp;recruiter)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">merupakan setter recruiter dari job</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -274,7 +298,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(int,java.lang.String,Recruiter,int,java.lang.String,java.lang.String)">
+<a id="&lt;init&gt;(int,java.lang.String,Recruiter,int,java.lang.String,JobCategory)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -284,9 +308,16 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
            <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
            <a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a>&nbsp;recruiter,
            int&nbsp;fee,
-           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;category,
-           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born)</pre>
+           <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born,
+           <a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a>&nbsp;category)</pre>
 <div class="block">Constructor for objects of class Job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - nama dari Job</dd>
+<dd><code>category</code> - kategori dari Job</dd>
+<dd><code>born</code> - tempat lahir dari Job</dd>
+<dd><code>recruiter</code> - rekruter dari Job</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -306,6 +337,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getId</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getId()</pre>
+<div class="block">merupakan getter Id dari Job</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>id</dd>
+</dl>
 </li>
 </ul>
 <a id="getName()">
@@ -315,6 +351,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getName</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getName()</pre>
+<div class="block">merupakan getter Name dari Job</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>name</dd>
+</dl>
 </li>
 </ul>
 <a id="getFee()">
@@ -324,6 +365,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getFee</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getFee()</pre>
+<div class="block">merupakan getter Fee dari Job</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>fee</dd>
+</dl>
 </li>
 </ul>
 <a id="getCategory()">
@@ -332,7 +378,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockList">
 <li class="blockList">
 <h4>getCategory</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getCategory()</pre>
+<pre class="methodSignature">public&nbsp;<a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a>&nbsp;getCategory()</pre>
 </li>
 </ul>
 <a id="getRecruiter()">
@@ -342,6 +388,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getRecruiter</h4>
 <pre class="methodSignature">public&nbsp;<a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a>&nbsp;getRecruiter()</pre>
+<div class="block">merupakan getter Recruiter dari Job</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Recruiter</dd>
+</dl>
 </li>
 </ul>
 <a id="getBorn()">
@@ -351,6 +402,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>getBorn</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getBorn()</pre>
+<div class="block">merupakan getter born dari Job</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>born</dd>
+</dl>
 </li>
 </ul>
 <a id="setId(int)">
@@ -360,6 +416,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setId</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setId&#8203;(int&nbsp;id)</pre>
+<div class="block">merupakan setter id dari job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>id</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="setName(java.lang.String)">
@@ -369,6 +430,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setName</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setName&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
+<div class="block">merupakan setter name dari job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="setRecruiter(Recruiter)">
@@ -378,6 +444,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setRecruiter</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setRecruiter&#8203;(<a href="Recruiter.html" title="class in &lt;Unnamed&gt;">Recruiter</a>&nbsp;recruiter)</pre>
+<div class="block">merupakan setter recruiter dari job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>recruiter</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="setFee(int)">
@@ -387,15 +458,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setFee</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setFee&#8203;(int&nbsp;fee)</pre>
-</li>
-</ul>
-<a id="setCategory(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setCategory</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setCategory&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;category)</pre>
+<div class="block">merupakan setter fee dari job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>fee</code> - </dd>
+</dl>
 </li>
 </ul>
 <a id="setBorn(java.lang.String)">
@@ -405,6 +472,20 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>setBorn</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setBorn&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;born)</pre>
+<div class="block">merupakan setter born dari job</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>born</code> - </dd>
+</dl>
+</li>
+</ul>
+<a id="JobCategory(JobCategory)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>JobCategory</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;JobCategory&#8203;(<a href="JobCategory.html" title="enum in &lt;Unnamed&gt;">JobCategory</a>&nbsp;category)</pre>
 </li>
 </ul>
 <a id="printData()">
@@ -414,6 +495,8 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <li class="blockList">
 <h4>printData</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;printData()</pre>
+<div class="block">method untuk print dari job
+ outputnya adalah berupa nama pekerjaan</div>
 </li>
 </ul>
 </li>

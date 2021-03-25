@@ -17,5 +17,6 @@ public class JWork
         job1.printData();
         //invoice1.printData();
         //System.out.println("Job Category :" + JobCategory.Devops);
+        //System.out.println("Payment type :" + PaymentType.EwalletPayment);
     }
 }
