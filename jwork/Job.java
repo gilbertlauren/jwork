@@ -7,22 +7,21 @@
 public class Job /** inisiasi class */
 {
     private int id, fee; /** inisiasi variabel */
-    private String name, born;
+    private String name;
     private Recruiter recruiter;
     private JobCategory category;
     /**
      * Constructor for objects of class Job
      * @param name nama dari Job
      * @param category kategori dari Job
-     * @param born tempat lahir dari Job
      * @param recruiter rekruter dari Job
+     * @param jobCategory kategori dari Job
      */
-    public Job(int id, String name, Recruiter recruiter, int fee, String born, JobCategory category) {
+    public Job(int id, String name, Recruiter recruiter, int fee, JobCategory category) {
         this.id = id;
         this.name = name;
         this.recruiter = recruiter;
         this.fee = fee;
-        this.born = born;
         this.category = category;
     }
     /**
@@ -46,6 +45,10 @@ public class Job /** inisiasi class */
     public int getFee() {
         return fee;
     }
+    /**
+     * merupakan getter JobCategory dari Job
+     * @return category
+     */
     public JobCategory getCategory() {
         return category;
     }
@@ -55,13 +58,6 @@ public class Job /** inisiasi class */
      */
     public Recruiter getRecruiter() {
         return recruiter;
-    }
-    /**
-     * merupakan getter born dari Job
-     * @return born
-     */
-    public String getBorn() {
-        return born;
     }
     /**
      * merupakan setter id dari job
@@ -92,13 +88,10 @@ public class Job /** inisiasi class */
         this.fee = fee;
     }
     /**
-     * merupakan setter born dari job
-     * @param born
+     * merupakan setter category dari job
+     * @param category
      */
-    public void setBorn (String born) {
-        this.born = born;
-    }
-    public void JobCategory (JobCategory category) {
+    public void setCategory (JobCategory category) {
         this.category = category;
     }
     /**

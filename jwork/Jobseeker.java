@@ -7,7 +7,7 @@
 public class Jobseeker /** inisiasi class */
 {
     private int id; /** inisiasi variabel */
-    private String name, email, password, joinDate, age;
+    private String name, email, password, joinDate;
 
     /**
      * Constructor for objects of class Jobseeker
@@ -16,15 +16,13 @@ public class Jobseeker /** inisiasi class */
      * @param email email dari Jobseeker
      * @param password password dari Jobseeker
      * @param joinDate tanggal bergabung dari Jobseeker
-     * @param age umur dari Jobseeker
      */
-    public Jobseeker(int id, String name, String email, String password, String joinDate, String age) {
+    public Jobseeker(int id, String name, String email, String password, String joinDate) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.joinDate = joinDate;
-        this.age = age;
     }
     /**
      * merupakan getter id dari Jobseeker
@@ -62,13 +60,6 @@ public class Jobseeker /** inisiasi class */
         return joinDate;
     }
     /**
-     * merupakan getter age dari Jobseeker
-     * @return age
-     */
-    public String getage() {
-        return age;
-    }
-    /**
      * merupakan setter id dari jobseeker
      * @param id
      */
@@ -102,13 +93,6 @@ public class Jobseeker /** inisiasi class */
      */
     public void setJoinDate (String joinDate) {
         this.joinDate = joinDate;
-    }
-    /**
-     * merupakan setter age dari jobseeker
-     * @param age
-     */
-    public void setage (String age) {
-        this.age = age;
     }
     /**
      * method untuk print dari jobseeker

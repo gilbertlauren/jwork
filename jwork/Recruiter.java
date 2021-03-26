@@ -8,7 +8,7 @@ public class Recruiter /** inisiasi class */
 {
     /** inisiasi variabel */
     private int id;
-    private String name, email, phoneNumber, born;
+    private String name, email, phoneNumber;
     private Location location;
     /**
      * Constructor for objects of class Recruiter
@@ -16,15 +16,13 @@ public class Recruiter /** inisiasi class */
      * @param name nama dari Recruiter
      * @param email email dari Recruiter
      * @param phonenumber nomor telepon dari Recruiter
-     * @param born tempat lahir dari Recruiter
      */
-    public Recruiter(int id, String name, String email, String phoneNumber, Location location, String born){
+    public Recruiter(int id, String name, String email, String phoneNumber, Location location){
         this.id = id;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.location = location;
-        this.born = born;
     }
     /**
      * merupakan getter id dari Recruiter
@@ -62,13 +60,6 @@ public class Recruiter /** inisiasi class */
         return location;
     }
     /**
-     * merupakan getter born dari Recruiter
-     * @return born
-     */
-    public String getBorn() {
-        return born;
-    }
-    /**
      * merupakan setter id dari Recruiter
      * @param id
      */
@@ -102,13 +93,6 @@ public class Recruiter /** inisiasi class */
      */
     public void setLocation(Location location) {
         this.location = location;
-    }
-    /**
-     * merupakan setter Born dari Recruiter
-     * @param Born
-     */
-    public void setBorn(String born) {
-        this.born = born;
     }
     /**
      * method untuk print dari Recruiter

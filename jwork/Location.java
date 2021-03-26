@@ -6,20 +6,18 @@
  */
 public class Location /** inisiasi class */
 {
-    private String province, city, description, born; /** inisiasi variabel */
+    private String province, city, description; /** inisiasi variabel */
     /**
      * Constructor for objects of class Location
      * @param province provinsi dari location
      * @param city kota dari location
      * @param description deskripsi dari location
-     * @param born tempat lahir dari lokasi
      */
-    public Location(String province, String city, String description, String born)
+    public Location(String province, String city, String description)
     {
         this.province = province;
         this.city = city;
         this.description = description;
-        this.born = born;
     }
     /**
      * merupakan getter province dari location
@@ -43,13 +41,6 @@ public class Location /** inisiasi class */
         return description;
     }
     /**
-     * merupakan getter tempat lahir dari location
-     * @return born
-     */
-    public String getBorn(){
-        return born;
-    }
-    /**
      * merupakan setter province dari location
      * @param province
      */
@@ -69,13 +60,6 @@ public class Location /** inisiasi class */
      */
     public void setDescription(String description){
         this.description = description;
-    }
-    /**
-     * merupakan setter born dari location
-     * @param born
-     */
-    public void setBorn(String born){
-        this.born = born;
     }
     /**
      * method untuk print dari location

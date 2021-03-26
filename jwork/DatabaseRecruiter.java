@@ -1,7 +1,8 @@
 
 /**
+ * Merupakan file class untuk DatabaseJob
  * @author Gilbert Lauren
- * @version 20 Maret 2021
+ * @version 26 Maret 2021
  */
 public class DatabaseRecruiter
 {
@@ -17,6 +18,6 @@ public class DatabaseRecruiter
         return null;
     }
     public static String[] getListRecruiter() {
-        return null;
+        return listRecruiter;
     }
 }

@@ -6,7 +6,7 @@
 public class Invoice /** inisiasi class */
 {
     private int id, idJob, totalFee; /** inisiasi variabel */
-    private String date, age;
+    private String date;
     private Jobseeker jobseeker;
     /**
      * Constructor for objects of class Invoice
@@ -14,16 +14,14 @@ public class Invoice /** inisiasi class */
      * @param idJob id job dari Invoice
      * @param totalFee total gaji dari Invoice
      * @param date tanggal dari Invoice
-     * @param age umur dari Invoice
      * @param jobseeker pencari perkerjaan dari Invoice
      */
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, String age) {
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker) {
         this.id = id;
         this.idJob = idJob;
         this.date = date;
         this.totalFee = totalFee;
         this.jobseeker = jobseeker;
-        this.age = age;
     }
     /**
      * merupakan getter Id dari Invoice
@@ -61,13 +59,6 @@ public class Invoice /** inisiasi class */
         return jobseeker;
     }
     /**
-     * merupakan getter age dari Invoice
-     * @return age
-     */
-    public String getage() {
-        return age;
-    }
-    /**
      * merupakan setter Id dari Invoice
      * @param id
      */
@@ -101,13 +92,6 @@ public class Invoice /** inisiasi class */
      */
     public void setJobseeker (Jobseeker jobseeker) {
         this.jobseeker = jobseeker;
-    }
-    /**
-     * merupakan setter age dari Invoice
-     * @param age
-     */
-    public void setage (String age) {
-        this.age = age;
     }
     /**
      * method untuk print dari Invoice

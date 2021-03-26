@@ -1,11 +1,10 @@
 
 /**
- * Write a description of class DatabaseJobseeker here.
- *
+ * Merupakan file class untuk DatabaseJobseeker
  * @author Gilbert Lauren
- * @version 25 Maret 2021
+ * @version 26 Maret 2021
  */
-public class DatabaseJobseeker
+public class DatabaseJobseeker /** inisiasi class */
 {
     private static String[] listJobseeker;
     /**
@@ -23,7 +22,7 @@ public class DatabaseJobseeker
     public static Jobseeker getJobseeker() {
         return null;
     }
-    public static Recruiter getListJobseeker() {
-        return null;
+    public static String[] getListJobseeker() {
+        return listJobseeker;
     }
 }

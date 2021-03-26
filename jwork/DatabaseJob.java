@@ -1,8 +1,9 @@
 /**
+ * Merupakan file class untuk DatabaseJob
  * @author Gilbert Lauren
- * @version 18 Maret 2021
+ * @version 26 Maret 2021
  */
-public class DatabaseJob
+public class DatabaseJob /** inisiasi class */
 {
     private static String[] listJob;
     
@@ -16,6 +17,6 @@ public class DatabaseJob
         return null;
     }
     public static String[] getListJob() {
-        return null;
+        return listJob;
     }
 }

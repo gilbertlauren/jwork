@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DatabaseRecruiter
-comment0.text=\r\n\ @author\ Gilbert\ Lauren\r\n\ @version\ 20\ Maret\ 2021\r\n
+comment0.text=\r\n\ Merupakan\ file\ class\ untuk\ DatabaseJob\r\n\ @author\ Gilbert\ Lauren\r\n\ @version\ 26\ Maret\ 2021\r\n
 comment1.params=recruiter
 comment1.target=boolean\ addRecruiter(Recruiter)
 comment2.params=recruiter
