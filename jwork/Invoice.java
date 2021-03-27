@@ -8,6 +8,8 @@ public class Invoice /** inisiasi class */
     private int id, idJob, totalFee; /** inisiasi variabel */
     private String date;
     private Jobseeker jobseeker;
+    private PaymentType paymentType;
+    private InvoiceStatus status;
     /**
      * Constructor for objects of class Invoice
      * @param id id dari Invoice
@@ -16,12 +18,14 @@ public class Invoice /** inisiasi class */
      * @param date tanggal dari Invoice
      * @param jobseeker pencari perkerjaan dari Invoice
      */
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker) {
+    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, PaymentType paymentType, InvoiceStatus status) {
         this.id = id;
         this.idJob = idJob;
         this.date = date;
         this.totalFee = totalFee;
         this.jobseeker = jobseeker;
+        this.paymentType = paymentType;
+        this.status = status;
     }
     /**
      * merupakan getter Id dari Invoice
@@ -59,6 +63,20 @@ public class Invoice /** inisiasi class */
         return jobseeker;
     }
     /**
+     * merupakan getter PaymentType dari Invoice
+     * @return PaymentType
+     */
+    public PaymentType getPaymentType() {
+        return paymentType;
+    }
+    /**
+     * merupakan getter InvoiceStatus dari Invoice
+     * @return InvoiceStatus
+     */
+    public InvoiceStatus getInvoiceStatus() {
+        return status;
+    }
+    /**
      * merupakan setter Id dari Invoice
      * @param id
      */
@@ -94,11 +112,30 @@ public class Invoice /** inisiasi class */
         this.jobseeker = jobseeker;
     }
     /**
+     * merupakan setter PaymentType dari Invoice
+     * @param PaymentType
+     */
+    public void setPaymentType (PaymentType paymentType) {
+        this.paymentType = paymentType;
+    }
+    /**
+     * merupakan setter InvoiceStatus dari Invoice
+     * @param PaymentType
+     */
+    public void setInvoiceStatus (InvoiceStatus status) {
+        this.status = status;
+    }
+    /**
      * method untuk print dari Invoice
      * outputnya adalah berupa jumlah gaji
      */
     public void printData(){
-        // Menampilkan perintah print untuk jumlah gaji
-        System.out.println("Gaji      :" + getTotalFee());
+        System.out.println("=============== INVOICE ===============");
+        System.out.println("ID: " + id);
+        System.out.println("ID Job: " + idJob);
+        System.out.println("Date: " + date);
+        System.out.println("Seeker: " + jobseeker.getName());
+        System.out.println("Fee: " + totalFee);
+        System.out.println("Status: " + status);
     }
 }
