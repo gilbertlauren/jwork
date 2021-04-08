@@ -65,7 +65,12 @@ public class Location /** inisiasi class */
      * method untuk print dari location
      * outputnya adalah nama provinsi
      */
-    public void printData(){
-        System.out.println("Provinsi  :" + getProvince());
+    //public void printData(){
+    //    System.out.println("Provinsi  :" + getProvince());
+    //}
+    public String toString() {
+        return "Province = " + province +
+               "\nCity = " + city +
+               "\nDescription = " + description;
     }
 }

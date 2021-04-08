@@ -98,7 +98,13 @@ public class Recruiter /** inisiasi class */
      * method untuk print dari Recruiter
      * outputnya adalah berupa nama Recruiter
      */
-    public void printData() {
-        System.out.println("Recruiter :" + getName());
+   // public void printData() {
+   //     System.out.println("Recruiter :" + getName());
+   // }
+    public String toString() {
+        return "id = " + id +
+               "\nName = " + name +
+               "\nPhoneNumber = " + phoneNumber +
+               "\nLocation = " + location;
     }
 }

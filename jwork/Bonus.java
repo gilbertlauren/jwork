@@ -95,11 +95,18 @@ public class Bonus
      * method untuk print dari Invoice
      * outputnya adalah berupa jumlah gaji
      */
-    public void printData() {
-        System.out.println("ID :" + getId());
-        System.out.println("Referral Code :" + getReferralCode());
-        System.out.println("Extra Fee :" + getExtraFee());
-        System.out.println("Min Total Fee :" + getMinTotalFee());
-        System.out.println("Active :" + getActive());
+    //public void printData() {
+    //    System.out.println("ID :" + getId());
+    //    System.out.println("Referral Code :" + getReferralCode());
+    //    System.out.println("Extra Fee :" + getExtraFee());
+    //    System.out.println("Min Total Fee :" + getMinTotalFee());
+    //    System.out.println("Active :" + getActive());
+    //}
+    public String toString() {
+        return "Id = " + getId() +
+               "\nReferral Code = " + getReferralCode() +
+               "\nExtra Fee = " + getExtraFee() +
+               "\nMin Total Fee = " + getMinTotalFee() +
+               "\nActive status = " + getActive();
     }
 }
