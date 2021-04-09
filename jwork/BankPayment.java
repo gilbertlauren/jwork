@@ -5,7 +5,7 @@
  */
 public class BankPayment extends Invoice
 {
-    private static PaymentType PAYMENT_TYPE = PaymentType.BankPayment;
+    private static final PaymentType PAYMENT_TYPE = PaymentType.BankPayment;
     private int adminFee;
     /**
      * Constructor for objects of class BankPayment

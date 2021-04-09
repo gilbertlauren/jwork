@@ -10,10 +10,10 @@ import java.util.Calendar;
 public class JWork 
 {
     public static void main (String args[]){
-        Calendar calendar = new GregorianCalendar(2021, 4, 8);
+        Calendar calendar = new GregorianCalendar(2021, 3, 8);
         
             Jobseeker jobseeker1 = new Jobseeker(1, "Gilbert Lauren", ".gilbert.lauren29@gmail.com", "akusukaOOP123", calendar);
-            Jobseeker jobseeker2 = new Jobseeker(1, "Gilbert Lauren", "gilbertlauren29@gmail.com", "akusukaOOP123", 2021, 4, 8);
+            Jobseeker jobseeker2 = new Jobseeker(1, "Gilbert Lauren", "gilbertlauren29@gmail.com", "akusukaOOP123", 2021, 3, 8);
             Jobseeker jobseeker3 = new Jobseeker(1, "Gilbert Lauren", "gilbert.lauren29@gmail.com", "akusukaOOP123");
             System.out.println(jobseeker1.toString());
             System.out.println(jobseeker2.toString());

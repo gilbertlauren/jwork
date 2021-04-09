@@ -67,14 +67,14 @@ public class Bonus
      * merupakan setter ReferralCode dari Bonus
      * @param id
      */
-    public void setReferralCode(String ReferralCode) {
+    public void setReferralCode(String referralCode) {
         this.referralCode = referralCode;
     }
     /**
      * merupakan setter ExtraFee dari Bonus
      * @param id
      */
-    public void setExtraFee(int ExtraFee) {
+    public void setExtraFee(int extraFee) {
         this.extraFee = extraFee;
     }
     /**

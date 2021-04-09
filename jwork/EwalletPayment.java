@@ -6,7 +6,7 @@
  */
 public class EwalletPayment extends Invoice
 {
-    private static PaymentType PAYMENT_TYPE = PaymentType.EwalletPayment;
+    private static final PaymentType PAYMENT_TYPE = PaymentType.EwalletPayment;
     private Bonus bonus;
 
     /**
