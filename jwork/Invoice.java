@@ -1,3 +1,8 @@
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /**
  * Merupakan file class untuk Invoice
  * @author Gilbert Lauren
@@ -7,7 +12,7 @@ public abstract class Invoice /** inisiasi class */
 {
     private int id; /** inisiasi variabel */
     private Job job;
-    private String date;
+    private Calendar date;
     protected int totalFee;
     private Jobseeker jobseeker;
     private InvoiceStatus invoiceStatus;
@@ -19,11 +24,11 @@ public abstract class Invoice /** inisiasi class */
      * @param date tanggal dari Invoice
      * @param jobseeker pencari perkerjaan dari Invoice
      */
-    public Invoice(int id, Job job, String date, Jobseeker jobseeker, InvoiceStatus invoiceStatus) {
+    public Invoice(int id, Job job, Jobseeker jobseeker, InvoiceStatus invoiceStatus) {
         this.id = id;
         this.job = job;
-        this.date = date;
         this.jobseeker = jobseeker;
+        date = new GregorianCalendar();
         this.invoiceStatus = invoiceStatus;
     }
     /**
@@ -44,7 +49,7 @@ public abstract class Invoice /** inisiasi class */
      * merupakan getter Date dari Invoice
      * @return Date
      */
-    public String getDate() {
+    public Calendar getDate() {
         return date;
     }
     /**
@@ -91,14 +96,17 @@ public abstract class Invoice /** inisiasi class */
      * merupakan setter Date dari Invoice
      * @param date
      */
-    public void setDate (String date) {
+    public void setDate (Calendar date) {
         this.date = date;
+    }
+    public void setDate (int year, int month, int dayOfMonth) {
+        this.date = new GregorianCalendar(year, month, dayOfMonth);
     }
     /**
      * merupakan setter TotalFee dari Invoice
      * @param totalFee
      */
-    public abstract void setTotalFee ();
+    public abstract void setTotalFee();
     /**
      * merupakan setter Jobseeker dari Invoice
      * @param jobseeker
@@ -117,7 +125,8 @@ public abstract class Invoice /** inisiasi class */
      * method untuk print dari Invoice
      * outputnya adalah berupa jumlah gaji
      */
-    public abstract void printData();
+       // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy");
+    //public abstract void printData();
      //   System.out.println("=============== INVOICE ===============");
      //   System.out.println("ID: " + id);
      //   System.out.println("ID Job: " + job);
