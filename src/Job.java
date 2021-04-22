@@ -12,10 +12,10 @@ public class Job /** inisiasi class */
     private JobCategory category;
     /**
      * Constructor for objects of class Job
-     * @param name nama dari Job
-     * @param category kategori dari Job
-     * @param recruiter rekruter dari Job
      * @param jobCategory kategori dari Job
+     * @param name nama dari Job
+     * @param recruiter rekruter dari Job
+     * @param category kategori dari Job
      */
     public Job(int id, String name, Recruiter recruiter, int fee, JobCategory category) {
         this.id = id;
@@ -28,7 +28,7 @@ public class Job /** inisiasi class */
      * merupakan getter Id dari Job
      * @return id
      */
-    public static int getId() {
+    public int getId() {
         return id;
     }
     /**

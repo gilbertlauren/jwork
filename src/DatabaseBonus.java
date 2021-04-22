@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * @version 1 April 2021
  */
 public class DatabaseBonus {
-    private ArrayList<Bonus> BONUS_DATABASE;
-    private int lastId;
+    private ArrayList<Bonus> BONUS_DATABASE = new ArrayList<>();
+    private int lastId = 0;
 
     /**
      * Constructor for objects of class Bonus

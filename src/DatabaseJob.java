@@ -18,7 +18,7 @@ public class DatabaseJob /** inisiasi class */
     }
     public static Job getJobById(int id) {
         for(Job job : JOB_DATABASE) {
-            if (Job.getId() == id) {
+            if (job.getId() == id) {
                 return job;
             }
         }
@@ -51,9 +51,17 @@ public class DatabaseJob /** inisiasi class */
         }
     }
     public static boolean addJob(Job job) {
-        return false;
+        JOB_DATABASE.add(job);
+        lastId=job.getId();
+        return true;
     }
-    public static boolean removeJob(Job job) {
+    public static boolean removeJob(int id) {
+        for (Job job : JOB_DATABASE) {
+            if (job.getId()==id) {
+                JOB_DATABASE.remove(job);
+                return true;
+            }
+        }
         return false;
     }
 }

@@ -12,10 +12,10 @@ public class DatabaseJobseeker /** inisiasi class */
     /**
      * Constructor for objects of class DatabaseJobseeker
      */
-    public ArrayList<Jobseeker> getDatabaseJobseeker() {
+    public static ArrayList<Jobseeker> getDatabaseJobseeker() {
         return JOBSEEKER_DATABASE;
     }
-    public int getLastId() {
+    public static int getLastId() {
         return lastId;
     }
     public static Jobseeker getJobseekerById(int id) {
