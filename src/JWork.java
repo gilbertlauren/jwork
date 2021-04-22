@@ -34,24 +34,5 @@ public class JWork
         BankPayment bankpayment1 = new BankPayment(1,job1,jobseeker1, InvoiceStatus.Finished);
         System.out.println(ewalletpayment1.toString());
         System.out.println(bankpayment1.toString());
-        //BankPayment bankpayment2 = new BankPayment(2,job1,"3 April 2021",jobseeker1, InvoiceStatus.Finished,100000);
-        //bankpayment1.setTotalFee();
-        //bankpayment2.setTotalFee();
-        //EwalletPayment EwalletPayment3 = new EwalletPayment(3,
-        //Invoice invoice1 = new Invoice(10,20,5000000,jobseeker1,PaymentType.BankPayment,InvoiceStatus.Finished);
-        //location1.printData();
-        //recruiter1.printData();
-        //jobseeker1.printData();
-        //job1.printData();
-        //invoice1.printData();
-        //bonus1.printData();
-        //ewalletpayment1.printData();
-        //ewalletpayment2.printData();
-        //ewalletpayment3.printData();
-        //bankpayment1.printData();
-        //bankpayment2.printData();
-        //System.out.println("Job Category :" + JobCategory.Devops);
-        //System.out.println("Payment type :" + PaymentType.EwalletPayment);
-        //System.out.println("Invoice Status :" + InvoiceStatus.Finished);
     }
 }

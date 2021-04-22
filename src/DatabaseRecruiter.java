@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * Merupakan file class untuk DatabaseJob
@@ -6,18 +8,35 @@
  */
 public class DatabaseRecruiter
 {
-    private static String[] listRecruiter;
+    private static ArrayList<Recruiter> RECRUITER_DATABASE;
+    private static int lastId;
 
-    public static boolean addRecruiter(Recruiter recruiter) {
-        return false;
+    public static ArrayList<Recruiter> getRecruiterDatabase(){
+        return RECRUITER_DATABASE;
     }
-    public static boolean removeRecruiter(Recruiter recruiter) {
-        return false;
+    public static int getLastId(){
+        return lastId;
     }
-    public static Recruiter getRecruiter() {
+    public static Recruiter getRecruiterById(int id) {
+        for (Recruiter recruiter : RECRUITER_DATABASE) {
+            if (recruiter.getId() == id) {
+                return recruiter;
+            }
+        }
         return null;
     }
-    public static String[] getListRecruiter() {
-        return listRecruiter;
+    public static boolean addRecruiter(Recruiter recruiter) {
+        RECRUITER_DATABASE.add(recruiter);
+        lastId=recruiter.getId();
+        return false;
+    }
+    public static boolean removeRecruiter(int id) {
+        for (Recruiter recruiter : RECRUITER_DATABASE) {
+            if (recruiter.getId()==id) {
+                RECRUITER_DATABASE.remove(recruiter);
+                return true;
+            }
+        }
+        return false;
     }
 }

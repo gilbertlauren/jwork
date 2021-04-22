@@ -1,4 +1,3 @@
-
 /**
  * Merupakan file class untuk Bonus
  * @author Gilbert Lauren
@@ -104,9 +103,9 @@ public class Bonus
     //}
     public String toString() {
         return "Id = " + getId() +
-               "\nReferral Code = " + getReferralCode() +
-               "\nExtra Fee = " + getExtraFee() +
-               "\nMin Total Fee = " + getMinTotalFee() +
-               "\nActive status = " + getActive();
+                "\nReferral Code = " + getReferralCode() +
+                "\nExtra Fee = " + getExtraFee() +
+                "\nMin Total Fee = " + getMinTotalFee() +
+                "\nActive status = " + getActive();
     }
 }

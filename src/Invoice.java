@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.GregorianCalendar;
 public abstract class Invoice /** inisiasi class */
 {
     private int id; /** inisiasi variabel */
-    private Job job;
+    private ArrayList<Job> jobs;
     private Calendar date;
     protected int totalFee;
     private Jobseeker jobseeker;
@@ -24,12 +25,11 @@ public abstract class Invoice /** inisiasi class */
      * @param date tanggal dari Invoice
      * @param jobseeker pencari perkerjaan dari Invoice
      */
-    public Invoice(int id, Job job, Jobseeker jobseeker, InvoiceStatus invoiceStatus) {
+    public Invoice(int id, ArrayList<Job> jobs, Jobseeker jobseeker) {
         this.id = id;
-        this.job = job;
-        this.jobseeker = jobseeker;
+        this.jobs = jobs;
         date = new GregorianCalendar();
-        this.invoiceStatus = invoiceStatus;
+        this.jobseeker = jobseeker;
     }
     /**
      * merupakan getter Id dari Invoice
@@ -42,8 +42,8 @@ public abstract class Invoice /** inisiasi class */
      * merupakan getter IdJob dari Invoice
      * @return idJob
      */
-    public Job getJob() {
-        return job;
+    public  ArrayList<Job> getJobs() {
+        return jobs;
     }
     /**
      * merupakan getter Date dari Invoice
@@ -89,8 +89,8 @@ public abstract class Invoice /** inisiasi class */
      * merupakan setter IdJobs dari Invoice
      * @param id
      */
-    public void setJob(Job job) {
-        this.job = job;
+    public void setJobs(ArrayList<Job> jobs) {
+        this.jobs = jobs;
     }
     /**
      * merupakan setter Date dari Invoice

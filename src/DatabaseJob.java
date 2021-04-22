@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Merupakan file class untuk DatabaseJob
  * @author Gilbert Lauren
@@ -5,18 +7,53 @@
  */
 public class DatabaseJob /** inisiasi class */
 {
-    private static String[] listJob;
-    
+    private static ArrayList<Job> JOB_DATABASE = new ArrayList<>();
+    private static int lastId = 0;
+
+    public static ArrayList<Job> getJobDatabase() {
+        return JOB_DATABASE;
+    }
+    public static int getLastId() {
+        return lastId;
+    }
+    public static Job getJobById(int id) {
+        for(Job job : JOB_DATABASE) {
+            if (Job.getId() == id) {
+                return job;
+            }
+        }
+        return null;
+    }
+    public static ArrayList<Job> getJobByRecruiter(int recruiterId) {
+        ArrayList<Job> joblist = new ArrayList<>();
+        for (Job job: JOB_DATABASE) {
+            if (job.getRecruiter().getId() == recruiterId) {
+                joblist.add(job);
+            }
+        }
+        if (joblist.isEmpty()) {
+            return null;
+        } else {
+            return joblist;
+        }
+    }
+    public static ArrayList<Job> getJobByCategory(JobCategory category) {
+        ArrayList<Job> jobList = new ArrayList<>();
+        for (Job job : JOB_DATABASE) {
+            if (job.getCategory() == category) {
+                jobList.add(job);
+            }
+        }
+        if (jobList.isEmpty()) {
+            return null;
+        } else{
+            return jobList;
+        }
+    }
     public static boolean addJob(Job job) {
         return false;
     }
     public static boolean removeJob(Job job) {
         return false;
-    }
-    public static Job getJob() {
-        return null;
-    }
-    public static String[] getListJob() {
-        return listJob;
     }
 }

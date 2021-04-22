@@ -28,7 +28,7 @@ public class Job /** inisiasi class */
      * merupakan getter Id dari Job
      * @return id
      */
-    public int getId() {
+    public static int getId() {
         return id;
     }
     /**
