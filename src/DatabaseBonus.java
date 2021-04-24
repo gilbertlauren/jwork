@@ -6,21 +6,21 @@ import java.util.ArrayList;
  * @version 1 April 2021
  */
 public class DatabaseBonus {
-    private ArrayList<Bonus> BONUS_DATABASE = new ArrayList<>();
-    private int lastId = 0;
+    private static ArrayList<Bonus> BONUS_DATABASE = new ArrayList<>();
+    private static int lastId = 0;
 
     /**
      * Constructor for objects of class Bonus
      */
-    public ArrayList<Bonus> getBonusDatabase() {
+    public static ArrayList<Bonus> getBonusDatabase() {
         return BONUS_DATABASE;
     }
 
-    public int getLastId() {
+    public static int getLastId() {
         return lastId;
     }
 
-    public Bonus getBonusById(int id) {
+    public static Bonus getBonusById(int id) {
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 return bonus;
@@ -29,7 +29,7 @@ public class DatabaseBonus {
         return null;
     }
 
-    public Bonus getBonusByReferralCode(String referralCode) {
+    public static Bonus getBonusByReferralCode(String referralCode) {
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getReferralCode().equals(referralCode)) {
                 return bonus;
@@ -38,7 +38,7 @@ public class DatabaseBonus {
         return null;
     }
 
-    public boolean ActiveBonus(int id) {
+    public static boolean ActiveBonus(int id) {
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 bonus.setActive(true);
@@ -48,7 +48,7 @@ public class DatabaseBonus {
         return false;
     }
 
-    public boolean deactivateBonus(int id) {
+    public static boolean deactivateBonus(int id) {
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 bonus.setActive(false);
@@ -57,8 +57,17 @@ public class DatabaseBonus {
         }
         return false;
     }
-
-    public boolean removeBonus(int id) {
+    public static boolean addBonus(Bonus bonus) {
+            for (Bonus bonusList: BONUS_DATABASE) {
+                if (bonusList.getReferralCode().equals(bonus.getReferralCode())) {
+                    return false;
+                }
+            }
+            BONUS_DATABASE.add(bonus);
+            lastId = bonus.getId();
+            return true;
+        }
+    public static boolean removeBonus(int id) {
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 BONUS_DATABASE.remove(bonus);

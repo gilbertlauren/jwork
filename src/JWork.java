@@ -21,6 +21,8 @@ public class JWork
         DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.WebDeveloper));
         DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.WebDeveloper));
         DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.Devops));
+        DatabaseBonus.addBonus(new Bonus(1,"lele", 500000, 5000000,false));
+        DatabaseBonus.addBonus(new Bonus(2,"lele", 500000, 7000000,true));
         System.out.println("======List Jobseeker======");
         for (Jobseeker jobseeker: DatabaseJobseeker.getDatabaseJobseeker()) {
             System.out.println(jobseeker.toString());
@@ -29,5 +31,7 @@ public class JWork
         for (Job job: DatabaseJob.getJobByCategory(JobCategory.WebDeveloper)) {
             System.out.println(job.toString());
         }
-    }
+        System.out.println("======BONUS======");
+        System.out.println(DatabaseBonus.getBonusByReferralCode("lele").toString());
+        }
 }
