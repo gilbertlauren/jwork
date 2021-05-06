@@ -13,20 +13,23 @@ public class DatabaseJob /** inisiasi class */
     public static ArrayList<Job> getJobDatabase() {
         return JOB_DATABASE;
     }
+
     public static int getLastId() {
         return lastId;
     }
-    public static Job getJobById(int id) {
-        for(Job job : JOB_DATABASE) {
+
+    public static Job getJobById(int id) throws JobNotFoundExecption {
+        for (Job job : JOB_DATABASE) {
             if (job.getId() == id) {
                 return job;
             }
         }
-        return null;
+        throw new JobNotFoundExecption(id);
     }
+
     public static ArrayList<Job> getJobByRecruiter(int recruiterId) {
         ArrayList<Job> joblist = new ArrayList<>();
-        for (Job job: JOB_DATABASE) {
+        for (Job job : JOB_DATABASE) {
             if (job.getRecruiter().getId() == recruiterId) {
                 joblist.add(job);
             }
@@ -37,6 +40,7 @@ public class DatabaseJob /** inisiasi class */
             return joblist;
         }
     }
+
     public static ArrayList<Job> getJobByCategory(JobCategory category) {
         ArrayList<Job> jobList = new ArrayList<>();
         for (Job job : JOB_DATABASE) {
@@ -46,22 +50,23 @@ public class DatabaseJob /** inisiasi class */
         }
         if (jobList.isEmpty()) {
             return null;
-        } else{
+        } else {
             return jobList;
         }
     }
+
     public static boolean addJob(Job job) {
         JOB_DATABASE.add(job);
-        lastId=job.getId();
+        lastId = job.getId();
         return true;
     }
-    public static boolean removeJob(int id) {
+    public static boolean removeJob(int id) throws JobNotFoundExecption {
         for (Job job : JOB_DATABASE) {
-            if (job.getId()==id) {
+            if (job.getId() == id) {
                 JOB_DATABASE.remove(job);
                 return true;
             }
         }
-        return false;
+        throw new JobNotFoundExecption(id);
     }
 }

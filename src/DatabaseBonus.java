@@ -20,13 +20,13 @@ public class DatabaseBonus {
         return lastId;
     }
 
-    public static Bonus getBonusById(int id) {
+    public static Bonus getBonusById(int id) throws BonusNotFoundException{
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 return bonus;
             }
         }
-        return null;
+        throw new BonusNotFoundException(id);
     }
 
     public static Bonus getBonusByReferralCode(String referralCode) {
@@ -57,23 +57,23 @@ public class DatabaseBonus {
         }
         return false;
     }
-    public static boolean addBonus(Bonus bonus) {
+    public static boolean addBonus(Bonus bonus) throws ReferralCodeAlreadyExistsException {
             for (Bonus bonusList: BONUS_DATABASE) {
                 if (bonusList.getReferralCode().equals(bonus.getReferralCode())) {
-                    return false;
+                    throw new ReferralCodeAlreadyExistsException(bonus);
                 }
             }
             BONUS_DATABASE.add(bonus);
             lastId = bonus.getId();
             return true;
         }
-    public static boolean removeBonus(int id) {
+    public static boolean removeBonus(int id) throws BonusNotFoundException{
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {
                 BONUS_DATABASE.remove(bonus);
                 return true;
             }
         }
-        return false;
+        throw new BonusNotFoundException(id);
     }
 }

@@ -8,30 +8,53 @@ import java.util.Calendar;
  * @version 26 Maret 2021
  */
 /** Merupakan inisiasi class untuk JWork */
-public class JWork 
-{
-    public static void main (String args[]){
+public class JWork {
+    public static void main(String args[]) {
         Calendar calendar = new GregorianCalendar(2021, 3, 8);
-        
-        Location location1 = new Location("Jawa Barat","Kota Bekasi","Kecamatan Bekasi Selatan");
-        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId()+1,"Geraldy Christanto","Geraldy.Christanto@ui.ac.id","14045",location1));
-        DatabaseJobseeker.addJobseeker(new Jobseeker(DatabaseJobseeker.getLastId()+1,"Gilbert Lauren","gilbert.lauren29@gmail.com","123"));
-        DatabaseJobseeker.addJobseeker(new Jobseeker(DatabaseJobseeker.getLastId()+1,"Gilbert Lauren","gilbert.lauren29@gmail.com","123"));
-        DatabaseJobseeker.addJobseeker(new Jobseeker(DatabaseJobseeker.getLastId()+1,"Geraldy Christanto","Geraldy.Christanto@ui.ac.id","123"));
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.WebDeveloper));
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.WebDeveloper));
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId()+1,"Web Developer",DatabaseRecruiter.getRecruiterById(1),5000000,JobCategory.Devops));
-        DatabaseBonus.addBonus(new Bonus(1,"lele", 500000, 5000000,false));
-        DatabaseBonus.addBonus(new Bonus(2,"lele", 500000, 7000000,true));
-        System.out.println("======List Jobseeker======");
-        for (Jobseeker jobseeker: DatabaseJobseeker.getDatabaseJobseeker()) {
-            System.out.println(jobseeker.toString());
+        try {
+            DatabaseJobseeker.addJobseeker(new Jobseeker(DatabaseJobseeker.getLastId() + 1, "Gilbert Lauren", "gilbert.lauren29@gmail.com", "123"));
+            DatabaseJobseeker.addJobseeker(new Jobseeker(DatabaseJobseeker.getLastId() + 1, "Gilbert Lauren", "gilbert.lauren29@gmail.com", "123"));
+        } catch (EmailAlreadyExistsException e) {
+            System.out.println(e.getMessage());
         }
-        System.out.println("\n\n======List Job======");
-        for (Job job: DatabaseJob.getJobByCategory(JobCategory.WebDeveloper)) {
-            System.out.println(job.toString());
+        try {
+            DatabaseBonus.addBonus(new Bonus(DatabaseBonus.getLastId() + 1, "lele", 50000, 5000000, false));
+            DatabaseBonus.addBonus(new Bonus(DatabaseBonus.getLastId() + 1, "lele", 50000, 5000000, true));
+        } catch (ReferralCodeAlreadyExistsException e) {
+            System.out.println(e.getMessage());
         }
-        System.out.println("======BONUS======");
-        System.out.println(DatabaseBonus.getBonusByReferralCode("lele").toString());
+        try {
+            DatabaseJobseeker.getJobseekerById(3);
+        } catch (JobSeekerNotFoundException e) {
+            System.out.println(e.getMessage());
         }
+        try {
+            DatabaseBonus.getBonusById(3);
+        } catch (BonusNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            DatabaseRecruiter.getRecruiterById(3);
+        } catch (RecruiterNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        try {
+            DatabaseJob.getJobById(3);
+        } catch (JobNotFoundExecption e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("\n\n======Database Bonus======");
+        for (Bonus bonus : DatabaseBonus.getBonusDatabase()) {
+            System.out.println(bonus.toString());
+        }
+        for (Invoice invoice:DatabaseInvoice.getInvoiceDatabase()) {
+            FeeCalculator temp = new FeeCalculator(invoice);
+            temp.start();
+        }
+        try{
+            DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
+        }catch (JobSeekerNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }

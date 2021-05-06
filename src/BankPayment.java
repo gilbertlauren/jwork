@@ -54,29 +54,40 @@ public class BankPayment extends Invoice {
      *
      * @param TotalFee
      */
-    public void setTotalFee() {
-        for (Job job : super.getJobs()) {
-            super.totalFee += job.getFee();
+    public void setTotalFee()
+    {
+        int totalJobFee = 0;
+        for(int i=0; i< getJobs().size();i++){
+            totalJobFee = totalJobFee + getJobs().get(i).getFee();
         }
-        if (adminFee != 0) {
-            super.totalFee -= adminFee;
+        if (getAdminFee() != 0)
+        {
+            this.totalFee = (totalJobFee + getAdminFee());
+        }
+        else
+        {
+            this.totalFee = totalJobFee;
         }
     }
+    public String toString()
+    {
+        SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM yyyy");
+        String date1 = format1.format(getDate().getTime());
+        String jobIn = "";
+        for(int i=0; i<getJobs().size();i++){
+            jobIn = jobIn + getJobs().get(i).getName() + " ";
+        }
+        return "\n================INVOICE================\n" +
+                "ID: " + getId() +
+                "\nJob: " + jobIn +
+                "\nDate: " + date1 +
+                "\nJobseeker: " + getJobseeker().getName() +
+                "\nAdmin Fee: " + getAdminFee() +
+                "\nTotal Fee: " + totalFee +
+                "\nStatus: " + getInvoiceStatus() +
+                "\nPayment Type: " + getPaymentType();
 
-    public String toString() {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy");
-        String listJobs = "";
-        for (Job job : super.getJobs()) {
-            listJobs += job.getId() + " ";
-            return
-                    "\nId = " + super.getId() +
-                            "\nId Job = " + listJobs +
-                            "\nDate = " + simpleDateFormat.format(super.getDate().getTime()) +
-                            "\nJobseeker= " + super.getJobseeker().getName() +
-                            "\nAdmin Fee= " + adminFee +
-                            "\nTotal Fee= " + totalFee +
-                            "\nStatus = " + super.getInvoiceStatus() +
-                            "\nPaymentType = " + getPaymentType();
+    }
         }
         //public void printData(){
         //    System.out.println("=============== INVOICE ===============");
@@ -89,6 +100,5 @@ public class BankPayment extends Invoice {
         //   System.out.println("Status: " + super.getInvoiceStatus().toString());
         //    System.out.println("Payment Type: " + getPaymentType().toString());
         //}
-        return listJobs;
-    }
-}
+        //return listJobs;
+

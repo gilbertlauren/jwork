@@ -121,6 +121,7 @@ public abstract class Invoice /** inisiasi class */
     public void setInvoiceStatus (InvoiceStatus status) {
         this.invoiceStatus = invoiceStatus;
     }
+    public abstract String toString();
     /**
      * method untuk print dari Invoice
      * outputnya adalah berupa jumlah gaji
