@@ -47,14 +47,16 @@ public class JWork {
         for (Bonus bonus : DatabaseBonus.getBonusDatabase()) {
             System.out.println(bonus.toString());
         }
+        try{
+            DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
+            DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
+            DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
+        } catch (JobSeekerNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         for (Invoice invoice:DatabaseInvoice.getInvoiceDatabase()) {
             FeeCalculator temp = new FeeCalculator(invoice);
             temp.start();
-        }
-        try{
-            DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
-        }catch (JobSeekerNotFoundException e) {
-            System.out.println(e.getMessage());
         }
     }
 }

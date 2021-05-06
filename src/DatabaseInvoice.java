@@ -35,7 +35,7 @@ public class DatabaseInvoice {
     public static boolean addInvoice(Invoice invoice) {
         //Loop for Checking the input
         for (Invoice listInvoice : INVOICE_DATABASE) {
-            if (invoice.getJobseeker().equals(listInvoice.getJobseeker()) && invoice.getInvoiceStatus() == InvoiceStatus.OnGoing) {
+            if (invoice.getJobseeker().equals(listInvoice.getJobseeker()) && invoice.getInvoiceStatus() == InvoiceStatus.Finished) {
                 return false;
             }
         }
