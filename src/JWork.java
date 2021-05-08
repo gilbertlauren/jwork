@@ -43,16 +43,21 @@ public class JWork {
         } catch (JobNotFoundExecption e) {
             System.out.println(e.getMessage());
         }
-        System.out.println("\n\n======Database Bonus======");
-        for (Bonus bonus : DatabaseBonus.getBonusDatabase()) {
-            System.out.println(bonus.toString());
-        }
         try{
             DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
             DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
             DatabaseInvoice.addInvoice(new BankPayment(DatabaseInvoice.getLastId() +1, DatabaseJob.getJobDatabase(), DatabaseJobseeker.getJobseekerById(1),10000));
-        } catch (JobSeekerNotFoundException e) {
+        } catch (JobSeekerNotFoundException | OngoingInvoiceAlreadyExistsException e) {
             System.out.println(e.getMessage());
+        }
+        try {
+            DatabaseInvoice.getInvoiceById(3);
+        } catch (InvoiceNotFoundExecption e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("\n\n======Database Bonus======");
+        for (Bonus bonus : DatabaseBonus.getBonusDatabase()) {
+            System.out.println(bonus.toString());
         }
         for (Invoice invoice:DatabaseInvoice.getInvoiceDatabase()) {
             FeeCalculator temp = new FeeCalculator(invoice);

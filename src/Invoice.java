@@ -30,7 +30,7 @@ public abstract class Invoice /** inisiasi class */
         this.jobs = jobs;
         date = new GregorianCalendar();
         this.jobseeker = jobseeker;
-        this.invoiceStatus = InvoiceStatus.Cancelled;
+        this.invoiceStatus = InvoiceStatus.OnGoing;
     }
     /**
      * merupakan getter Id dari Invoice
