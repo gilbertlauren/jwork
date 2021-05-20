@@ -14,6 +14,51 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JWork {
     public static void main(String args[]) {
         SpringApplication.run(JWork.class, args);
+        Location lokasi1 = new Location("Jawa Barat", "Bekasi", "Bekasi Selatan");
+        Location lokasi2 = new Location("DKI Jakarta", "Jakarta", "Kota Jakarta");
+        Location lokasi3 = new Location("Sumatra Utara", "Medan", "Horas");
+
+
+        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId() + 1,
+                "Gilbert",
+                "gilbert.lauren@ui.ac.id",
+                "081910102929",
+                lokasi1));
+        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId() + 1,
+                "Gilbert Lauren",
+                "gilbert.lauren29@gmail.com",
+                "14045",
+                lokasi2));
+        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId() + 1,
+                "Lauren",
+                "lauren@gmail.com",
+                "1234567890",
+                lokasi3));
+
+        try {
+            DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1,
+                    DatabaseRecruiter.getRecruiterById(1),
+                    "Front End Dev",
+                    25000,
+                    JobCategory.FrontEnd));
+            DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1,
+                    DatabaseRecruiter.getRecruiterById(1),
+                    "Data Analyst",
+                    15000,
+                    JobCategory.DataAnalyst));
+            DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1,
+                    DatabaseRecruiter.getRecruiterById(2),
+                    "Back End",
+                    20000,
+                    JobCategory.BackEnd));
+            DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1,
+                    DatabaseRecruiter.getRecruiterById(3),
+                    "Back End2",
+                    30000,
+                    JobCategory.BackEnd));
+        } catch (RecruiterNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
 
 //        Calendar calendar = new GregorianCalendar(2021, 3, 8);
 //        try {

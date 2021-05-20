@@ -17,10 +17,10 @@ public class Job /** inisiasi class */
      * @param recruiter rekruter dari Job
      * @param category kategori dari Job
      */
-    public Job(int id, String name, Recruiter recruiter, int fee, JobCategory category) {
+    public Job(int id, Recruiter recruiter, String name, int fee, JobCategory category) {
         this.id = id;
-        this.name = name;
         this.recruiter = recruiter;
+        this.name = name;
         this.fee = fee;
         this.category = category;
     }
