@@ -18,10 +18,10 @@ public class BonusController {
         return DatabaseBonus.getBonusByReferralCode(referralCode);
     }
 
-    @RequestMapping(value = "/bonus", method = RequestMethod.POST)
-    public Bonus addBonus(@RequestParam(value = "Referral Code") String referralCode,
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public Bonus addBonus(@RequestParam(value = "ReferralCode") String referralCode,
                           @RequestParam(value = "discount") int extraFee,
-                          @RequestParam(value = "Minimal Total Fee") int minTotalFee,
+                          @RequestParam(value = "MinimalTotalFee") int minTotalFee,
                           @RequestParam(value = "active") boolean active) {
         try {
             Bonus bonus = new Bonus(DatabaseBonus.getLastId() + 1, referralCode, extraFee, minTotalFee, active);

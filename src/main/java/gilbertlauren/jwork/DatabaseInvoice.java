@@ -44,6 +44,15 @@ public class DatabaseInvoice {
         lastId = invoice.getId();
         return true;
     }
+    public static boolean changeInvoiceStatus(int id, InvoiceStatus invoiceStatus) {
+        for (Invoice invoice : INVOICE_DATABASE) {
+            if (invoice.getId() == id) {
+                invoice.setInvoiceStatus(invoiceStatus);
+                return true;
+            }
+        }
+        return false;
+    }
     public static boolean removeInvoice(int id) throws InvoiceNotFoundExecption{
         for (Invoice invoice : INVOICE_DATABASE) {
             if (invoice.getId() == id) {
