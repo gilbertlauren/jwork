@@ -1,5 +1,10 @@
 package gilbertlauren.jwork;
-
+/**
+ * Exception when Recruiter is not found
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class RecruiterNotFoundException extends Exception{
     private int recruiter_error;
 

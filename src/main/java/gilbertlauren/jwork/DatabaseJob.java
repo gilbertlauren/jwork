@@ -2,11 +2,12 @@ package gilbertlauren.jwork;
 import java.util.ArrayList;
 
 /**
- * Merupakan file class untuk DatabaseJob
+ * Contains the list of jobs that are available
+ *
  * @author Gilbert Lauren
- * @version 26 Maret 2021
+ * @version 03/26/2021
  */
-public class DatabaseJob /** inisiasi class */
+public class DatabaseJob
 {
     private static ArrayList<Job> JOB_DATABASE = new ArrayList<>();
     private static int lastId = 0;
@@ -55,12 +56,21 @@ public class DatabaseJob /** inisiasi class */
             return jobList;
         }
     }
-
+    /**
+     * Add a job in DatabaseJob Class
+     *
+     * @return boolean false for now
+     */
     public static boolean addJob(Job job) {
         JOB_DATABASE.add(job);
         lastId = job.getId();
         return true;
     }
+    /**
+     * Removes a job in DatabaseJob Class
+     *
+     * @return boolean false for now
+     */
     public static boolean removeJob(int id) throws JobNotFoundExecption {
         for (Job job : JOB_DATABASE) {
             if (job.getId() == id) {

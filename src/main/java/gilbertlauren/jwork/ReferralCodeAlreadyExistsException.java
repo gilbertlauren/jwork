@@ -1,5 +1,10 @@
 package gilbertlauren.jwork;
-
+/**
+ * Exception when ReferralCode is not found
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class ReferralCodeAlreadyExistsException extends Exception{
     private Bonus referral_error;
 

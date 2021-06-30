@@ -1,4 +1,11 @@
 package gilbertlauren.jwork;
+
+/**
+ * Exception when email already exist in database
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class EmailAlreadyExistsException extends Exception{
     private Jobseeker jobseeker_error;
 

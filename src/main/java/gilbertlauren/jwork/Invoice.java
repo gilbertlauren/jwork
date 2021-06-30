@@ -6,9 +6,12 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Merupakan file class untuk Invoice
+ * Invoice of a job for the job seeker
+ * <p>
+ * Contains the nessecary info about a job taken by the jobseeker
+ *
  * @author Gilbert Lauren
- * @version 18 Maret 2021
+ * @version 03/18/2021
  */
 public abstract class Invoice /** inisiasi class */
 {
@@ -19,12 +22,12 @@ public abstract class Invoice /** inisiasi class */
     private Jobseeker jobseeker;
     private InvoiceStatus invoiceStatus;
     /**
-     * Constructor for objects of class Invoice
-     * @param id id dari Invoice
-     * @param idJob id job dari Invoice
-     * @param totalFee total gaji dari Invoice
-     * @param date tanggal dari Invoice
-     * @param jobseeker pencari perkerjaan dari Invoice
+     * Constructor of Invoice Class
+     *
+     * @param id        id of Invoice
+     * @param jobs      Job's id of Invoice
+     * @param jobseeker Jobseeker class of Invoice
+     * @see Jobseeker
      */
     public Invoice(int id, ArrayList<Job> jobs, Jobseeker jobseeker) {
         this.id = id;
@@ -34,69 +37,79 @@ public abstract class Invoice /** inisiasi class */
         this.invoiceStatus = InvoiceStatus.OnGoing;
     }
     /**
-     * merupakan getter Id dari Invoice
-     * @return id
+     * Accessor of field "id" in Invoice Class
+     *
+     * @return int returns the id of an Invoice
      */
     public int getId() {
         return id;
     }
     /**
-     * merupakan getter IdJob dari Invoice
-     * @return idJob
+     * Accessor of field "idJob" in Invoice Class
+     *
+     * @return int returns the idJob of an Invoice
      */
     public  ArrayList<Job> getJobs() {
         return jobs;
     }
     /**
-     * merupakan getter Date dari Invoice
-     * @return Date
+     * Accessor of field "date" in Invoice Class
+     *
+     * @return String returns the date of an Invoice
      */
     public Calendar getDate() {
         return date;
     }
     /**
-     * merupakan getter TotalFee dari Invoice
-     * @return totalFee
+     * Accessor of field "totalFee" in Invoice Class
+     *
+     * @return int returns the totalFee of an Invoice
      */
     public int getTotalFee() {
         return totalFee;
     }
     /**
-     * merupakan getter Jobseeker dari Invoice
-     * @return jobseeker
+     * Accessor of field "Jobseeker" in Invoice Class
+     *
+     * @return Jobseeker returns the jobseeker class of an Invoice
      */
     public Jobseeker getJobseeker() {
         return jobseeker;
     }
     /**
-     * merupakan getter PaymentType dari Invoice
-     * @return PaymentType
+     * Accessor of PAYMENT_TYPE
+     *
+     * @see EwalletPayment
      */
     public abstract PaymentType getPaymentType();
     /**
-     * merupakan getter InvoiceStatus dari Invoice
-     * @return InvoiceStatus
+     * Accessor of field "invoiceStatus" in Invoice Class
+     *
+     * @return InvoiceStatus returns the invoice status enum of an Invoice
      */
     public InvoiceStatus getInvoiceStatus() {
         return invoiceStatus;
     }
     /**
-     * merupakan setter Id dari Invoice
-     * @param id
+     * Mutator of field "id" in Invoice Class
+     *
+     * @param id new id for an Invoice
      */
     public void setId(int id) {
         this.id = id;
     }
     /**
-     * merupakan setter IdJobs dari Invoice
-     * @param id
+     * Mutator of field "idJob" in Invoice Class
+     *
+     * @param jobs new idJob for an Invoice
      */
     public void setJobs(ArrayList<Job> jobs) {
         this.jobs = jobs;
     }
     /**
-     * merupakan setter Date dari Invoice
-     * @param date
+     * Mutator of field "date" in Invoice Class
+     *
+     * @param date new date for an Invoice
      */
     public void setDate (Calendar date) {
         this.date = date;
@@ -105,29 +118,29 @@ public abstract class Invoice /** inisiasi class */
         this.date = new GregorianCalendar(year, month, dayOfMonth);
     }
     /**
-     * merupakan setter TotalFee dari Invoice
-     * @param totalFee
+     * Mutator of field "totalFee" in Invoice Class
      */
     public abstract void setTotalFee();
     /**
-     * merupakan setter Jobseeker dari Invoice
-     * @param jobseeker
+     * Mutator of field "jobseeker"  in Invoice Class
+     *
+     * @param jobseeker new jobseeker for an Invoice
      */
     public void setJobseeker (Jobseeker jobseeker) {
         this.jobseeker = jobseeker;
     }
     /**
-     * merupakan setter InvoiceStatus dari Invoice
-     * @param PaymentType
+     * Mutator of field "invoiceStatus"  in Invoice Class
+     *
+     * @param status new invoice status for an Invoice
      */
     public void setInvoiceStatus (InvoiceStatus status) {
-        this.invoiceStatus = invoiceStatus;
+        this.invoiceStatus = status;
     }
-    public abstract String toString();
     /**
-     * method untuk print dari Invoice
-     * outputnya adalah berupa jumlah gaji
+     * Prints out the data of Invoice
      */
+    public abstract String toString();
        // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy");
     //public abstract void printData();
      //   System.out.println("=============== INVOICE ===============");

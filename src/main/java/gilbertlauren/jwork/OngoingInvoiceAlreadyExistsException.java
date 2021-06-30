@@ -1,5 +1,10 @@
 package gilbertlauren.jwork;
-
+/**
+ * Exception when Ongoing Invoice exists
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class OngoingInvoiceAlreadyExistsException extends Exception {
         private Invoice invoice_error;
 

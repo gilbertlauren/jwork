@@ -4,57 +4,67 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
- * Merupakan file subclass untuk Invoice
+ * Subclass of Invoice, defining payment using Bank Payment
+ *
  * @author Gilbert Lauren
- * @version 3 April 2021
+ * @version 04/03/2021
  */
 public class BankPayment extends Invoice {
     private static final PaymentType PAYMENT_TYPE = PaymentType.BankPayment;
     private int adminFee;
 
     /**
-     * Constructor for objects of class BankPayment
+     * Constructor of BankPayment
+     *
+     * @param id        id of Invoice
+     * @param jobs      Job in Invoice
+     * @param jobseeker Jobseeker in Invoice
      */
     public BankPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker) {
         super(id, jobs, jobseeker);
     }
-
+    /**
+     * Constructor of BankPayment with admin fees
+     *
+     * @param id        id of Invoice
+     * @param jobs      Job in Invoice
+     * @param jobseeker Jobseeker in Invoice
+     * @param adminFee  admin fee
+     */
     public BankPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker, int adminFee) {
         super(id, jobs, jobseeker);
         this.adminFee = adminFee;
     }
 
     /**
-     * merupakan getter getPaymentType dari BankPayment
+     * Returns the type of payment (Bank Payment)
      *
-     * @return PAYMENT_TYPE
+     * @return PaymentType
      */
     public PaymentType getPaymentType() {
         return PAYMENT_TYPE;
     }
 
     /**
-     * merupakan getter AdminFee dari BankPayment
+     * Accessor of adminFee in BankPayment
      *
-     * @return adminFee
+     * @return int adminFee
      */
     public int getAdminFee() {
         return adminFee;
     }
 
     /**
-     * merupakan setter AdminFee dari BankPayment
+     * Mutator of adminFee in BankPayment
      *
-     * @param AdminFee
+     * @param adminFee
      */
     public void setAdminFee(int adminFee) {
         this.adminFee = adminFee;
     }
 
     /**
-     * merupakan setter TotalFee dari BankPayment
-     *
-     * @param TotalFee
+     * Sets whether adminFee should be applied to totalFee
      */
     public void setTotalFee()
     {
@@ -64,13 +74,18 @@ public class BankPayment extends Invoice {
         }
         if (getAdminFee() != 0)
         {
-            this.totalFee = (totalJobFee + getAdminFee());
+            this.totalFee = (totalJobFee - getAdminFee());
         }
         else
         {
             this.totalFee = totalJobFee;
         }
     }
+    /**
+     * returns the current data in Invoice
+     *
+     * @return string
+     */
     public String toString()
     {
         SimpleDateFormat format1 = new SimpleDateFormat("dd MMMM yyyy");

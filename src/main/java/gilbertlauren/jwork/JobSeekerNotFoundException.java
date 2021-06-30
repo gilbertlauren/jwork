@@ -1,5 +1,10 @@
 package gilbertlauren.jwork;
-
+/**
+ * Exception when Jobseeker is not found
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class JobSeekerNotFoundException extends Exception {
 
     private int jobseeker_error;

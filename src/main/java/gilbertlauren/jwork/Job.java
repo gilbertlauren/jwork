@@ -1,21 +1,31 @@
 package gilbertlauren.jwork;
 /**
- * Merupakan file class untuk Job
+ * A job that is seeked by the jobseeker
+ * <p>
+ * Contains a specific job for the jobseeker, from a recruiter with certain fees and category
+ *
  * @author Gilbert Lauren
- * @version 18 Maret 2021
+ * @version 03/18/2021
  */
-public class Job /** inisiasi class */
+
+/**
+ * Empty Constructor of Job Class
+ */
+public class Job
 {
-    private int id, fee; /** inisiasi variabel */
+    private int id, fee;
     private String name;
     private Recruiter recruiter;
     private JobCategory category;
     /**
-     * Constructor for objects of class Job
-     * @param jobCategory kategori dari Job
-     * @param name nama dari Job
-     * @param recruiter rekruter dari Job
-     * @param category kategori dari Job
+     * Constructor of Job Class
+     *
+     * @param id        id of Job
+     * @param recruiter Recruiter class of Job
+     * @param name      email of Job
+     * @param fee       password of Job
+     * @param category  category of Job
+     * @see Recruiter
      */
     public Job(int id, Recruiter recruiter, String name, int fee, JobCategory category) {
         this.id = id;
@@ -25,79 +35,85 @@ public class Job /** inisiasi class */
         this.category = category;
     }
     /**
-     * merupakan getter Id dari Job
-     * @return id
+     * Accessor of field "id" in Job Class
+     *
+     * @return int returns the id of a Job
      */
     public int getId() {
         return id;
     }
     /**
-     * merupakan getter Name dari Job
-     * @return name
+     * Accessor of field "name" in Job Class
+     *
+     * @return String returns the name of a Job
      */
     public String getName() {
         return name;
     }
     /**
-     * merupakan getter Fee dari Job
-     * @return fee
+     * Accessor of field "fee" in Job Class
+     *
+     * @return int returns the fee of a Job
      */
     public int getFee() {
         return fee;
     }
     /**
-     * merupakan getter JobCategory dari Job
-     * @return category
+     * Accessor of field "category" in Job Class
+     *
+     * @return String returns the category of a Job
      */
     public JobCategory getCategory() {
         return category;
     }
     /**
-     * merupakan getter Recruiter dari Job
-     * @return Recruiter
+     * Accessor of field "recruiter" in Job Class
+     *
+     * @return Recruiter returns the recruiter class of a Job
      */
     public Recruiter getRecruiter() {
         return recruiter;
     }
     /**
-     * merupakan setter id dari job
-     * @param id
+     * Mutator of field "id"  in Job Class
+     *
+     * @param id for a Job
      */
     public void setId (int id) {
         this.id = id;
     }
     /**
-     * merupakan setter name dari job
-     * @param name
+     * Mutator of field "name"  in Job Class
+     *
+     * @param name for a Job
      */
     public void setName (String name) {
         this.name = name;
     }
     /**
-     * merupakan setter recruiter dari job
-     * @param recruiter
+     * Mutator of field "recruiter"  in Job Class
+     *
+     * @param recruiter class for a Job
      */
     public void setRecruiter (Recruiter recruiter) {
         this.recruiter = recruiter;
     }
     /**
-     * merupakan setter fee dari job
-     * @param fee
+     * Mutator of field "fee"  in Job Class
+     *
+     * @param fee for a Job
      */
     public void setFee (int fee) {
         this.fee = fee;
     }
     /**
-     * merupakan setter category dari job
-     * @param category
+     * Mutator of field "category"  in Job Class
+     *
+     * @param category for a Job
      */
     public void setCategory (JobCategory category) {
         this.category = category;
     }
-    /**
-     * method untuk print dari job
-     * outputnya adalah berupa nama pekerjaan
-     */
     //public void printData() {
     //    System.out.println("=============== JOB ===============");
     //    System.out.println("ID: " + id);

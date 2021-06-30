@@ -3,9 +3,10 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * Merupakan file class untuk DatabaseJob
+ * Contains the list of recruiters that are available
+ *
  * @author Gilbert Lauren
- * @version 26 Maret 2021
+ * @version 3/26/2021
  */
 public class DatabaseRecruiter
 {
@@ -26,11 +27,21 @@ public class DatabaseRecruiter
         }
         throw new RecruiterNotFoundException(id);
     }
+    /**
+     * Adds a Recruiter in DatabaseRecruiter Class
+     *
+     * @return boolean false for now
+     */
     public static boolean addRecruiter(Recruiter recruiter) {
         RECRUITER_DATABASE.add(recruiter);
         lastId=recruiter.getId();
         return true;
     }
+    /**
+     * Removes a Recruiter in DatabaseRecruiter Class
+     *
+     * @return boolean false for now
+     */
     public static boolean removeRecruiter(int id) throws RecruiterNotFoundException{
         for (Recruiter recruiter : RECRUITER_DATABASE) {
             if (recruiter.getId()==id) {

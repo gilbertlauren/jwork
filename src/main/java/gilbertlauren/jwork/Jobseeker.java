@@ -7,24 +7,28 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Merupakan file class untuk Jobseeker
+ * The Jobseeker or person seeking for jobs
+ * <p>
+ * Defines basic info of someone seeking for jobs
+ *
  * @author Gilbert Lauren
- * @version 18 Maret 2021
+ * @version 03/18/2021
  */
 
-public class Jobseeker /** inisiasi class */
+public class Jobseeker
 {
-    private int id; /** inisiasi variabel */
+    private int id;
     private String name, email, password;
     public Calendar joinDate;
 
     /**
-     * Constructor for objects of class Jobseeker
-     * @param id id dari Jobseeker
-     * @param name nama dari Jobseeker
-     * @param email email dari Jobseeker
-     * @param password password dari Jobseeker
-     * @param joinDate tanggal bergabung dari Jobseeker
+     * Constructor of Jobseeker Class with Calendar input
+     *
+     * @param id       id of Jobseeker
+     * @param name     name of Jobseeker
+     * @param email    email of Jobseeker
+     * @param password password of Jobseeker
+     * @param joinDate join date of Jobseeker
      */
     public Jobseeker(int id, String name, String email, String password, Calendar joinDate) {
         this.id = id;
@@ -33,6 +37,17 @@ public class Jobseeker /** inisiasi class */
         setPassword(password);
         this.joinDate = joinDate;
     }
+    /**
+     * Constructor of Jobseeker Class with Calendar input
+     *
+     * @param id         id of Jobseeker
+     * @param name       name of Jobseeker
+     * @param email      email of Jobseeker
+     * @param password   password of Jobseeker
+     * @param year       year of joinDate
+     * @param month      month of joinDate
+     * @param dayOfMonth day of joinDate
+     */
     public Jobseeker(int id, String name, String email, String password, int year, int month, int dayOfMonth) {
         this.id = id;
         this.name = name;
@@ -40,6 +55,14 @@ public class Jobseeker /** inisiasi class */
         this.setPassword(password);
         this.setJoinDate(year, month, dayOfMonth);
     }
+    /**
+     * Constructor of Jobseeker Class without calendar input
+     *
+     * @param id       id of Jobseeker
+     * @param name     name of Jobseeker
+     * @param email    email of Jobseeker
+     * @param password password of Jobseeker
+     */
     public Jobseeker(int id, String name, String email, String password) {
         this.id = id;
         this.name = name;
@@ -48,57 +71,66 @@ public class Jobseeker /** inisiasi class */
         this.joinDate = new GregorianCalendar();
     }
     /**
-     * merupakan getter id dari Jobseeker
-     * @return id
+     * Accessor of field "id" in Jobseeker Class
+     *
+     * @return int returns the id of the Jobseeker
      */
     public int getId() {
         return id;
     }
     /**
-     * merupakan getter name dari Jobseeker
-     * @return name
+     * Accessor of field "name" in Jobseeker Class
+     *
+     * @return String returns the name of Jobseeker
      */
     public String getName() {
         return name;
     }
     /**
-     * merupakan getter email dari Jobseeker
-     * @return email
+     /**
+     * Accessor of field "email" in Jobseeker Class
+     *
+     * @return String returns the email of Jobseeker
      */
     public String getEmail() {
         return email;
     }
     /**
-     * merupakan getter password dari Jobseeker
-     * @return password
+     * Accessor of field "password" in Jobseeker Class
+     *
+     * @return String returns the password of Jobseeker
      */
     public String getPassword() {
         return password;
     }
     /**
-     * merupakan getter joinDate dari Jobseeker
-     * @return joinDate
+     * Accessor of field "joinDate" in Class
+     *
+     * @return String returns the joinDate of Jobseeker
      */
     public Calendar getJoinDate() {
         return joinDate;
     }
     /**
-     * merupakan setter id dari jobseeker
-     * @param id
+     * Mutator of field "id"  in Jobseeker Class
+     *
+     * @param id new id for Jobseeker
      */
     public void setId (int id) {
         this.id = id;
     }
     /**
-     * merupakan setter name dari jobseeker
-     * @param name
+     * Mutator of field "name" in Jobseeker Class
+     *
+     * @param name new name for Jobseeker
      */
     public void setName (String name) {
         this.name = name;
     }
     /**
-     * merupakan setter email dari jobseeker
-     * @param email
+     * Mutator of field "email" in Jobseeker Class
+     *
+     * @param email new email for Jobseeker
      */
     public void setEmail (String email) {
         Pattern pt = Pattern.compile("(?!.(?:\\.\\.))(^[\\w&~][\\w&*~.]+@(?!.*(?:\\s))[\\w]+[\\w-.]+[\\w]+$)");
@@ -111,8 +143,9 @@ public class Jobseeker /** inisiasi class */
         }
     }
     /**
-     * merupakan setter password dari jobseeker
-     * @param password
+     * Mutator of field "password" in Jobseeker Class
+     *
+     * @param password new password for Jobseeker
      */
     public void setPassword(String password) {
         Pattern passRegex = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=\\S+$).{6,}$");
@@ -124,19 +157,23 @@ public class Jobseeker /** inisiasi class */
         }
     }
     /**
-     * merupakan setter joinDate dari jobseeker
-     * @param joinDate
+     * Mutator of field "joinDate" in Jobseeker Class
+     *
+     * @param joinDate new joinDate for Jobseeker
      */
     public void setJoinDate (Calendar joinDate) {
         this.joinDate = joinDate;
     }
+    /**
+     * Mutator of field "joinDate" in Jobseeker Class
+     *
+     * @param year       new year of joinDate
+     * @param month      new month of joinDate
+     * @param dayOfMonth new day of joinDate
+     */
     public void setJoinDate (int year, int month, int dayOfMonth) {
         this.joinDate = new GregorianCalendar(year, month, dayOfMonth);
     }
-    /**
-     * method untuk print dari jobseeker
-     * outputnya adalah berupa nama pencari kerja
-     */
     public String toString() {
     //Date date = joinDate.getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy");

@@ -1,8 +1,14 @@
 package gilbertlauren.jwork;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * Merupakan file enum untuk JobCategory
+ * Enumeration class JobCategory - Consits of job types within JWork
+ * Web Developer, Front End, Back End, UI, UX, Devops, Data Scientist, Data Analyst
+ *
  * @author Gilbert Lauren
- * @version 26 Maret 2021
+ * @version 03/26/2021
  */
 public enum JobCategory
 {
@@ -24,11 +30,32 @@ public enum JobCategory
     DataAnalyst("Data Analyst"); 
     
     private String name;
-    
+    /**
+     * Constructor of JobCategory enum
+     *
+     * @param name name of enum elemen
+     */
     private JobCategory(String name) {
         this.name = name;
     }
+    /**
+     * Returns the name of JobCategory enum in String
+     *
+     * @return String returns the name of JobCategory
+     */
     public String toString() {
         return name;
+    }
+
+    private static final Map<String, JobCategory> BY_LABEL = new HashMap<>();
+
+    static {
+        for (JobCategory category : values()) {
+            BY_LABEL.put(category.name, category);
+        }
+    }
+
+    public static JobCategory valueOfLabel(String label) {
+        return BY_LABEL.get(label);
     }
 }

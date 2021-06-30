@@ -15,7 +15,7 @@ public class Recruiter /** inisiasi class */
      * @param id id dari Recruiter
      * @param name nama dari Recruiter
      * @param email email dari Recruiter
-     * @param phonenumber nomor telepon dari Recruiter
+     * @param phoneNumber nomor telepon dari Recruiter
      */
     public Recruiter(int id, String name, String email, String phoneNumber, Location location){
         this.id = id;
@@ -82,14 +82,14 @@ public class Recruiter /** inisiasi class */
     }
     /**
      * merupakan setter PhoneNumber dari Recruiter
-     * @param phoneNumber
+     * @param PhoneNumber
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.phoneNumber = phoneNumber;
     }
     /**
      * merupakan setter Location dari Recruiter
-     * @param Location
+     * @param location
      */
     public void setLocation(Location location) {
         this.location = location;

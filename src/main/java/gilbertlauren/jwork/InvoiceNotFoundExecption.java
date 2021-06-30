@@ -1,4 +1,10 @@
 package gilbertlauren.jwork;
+/**
+ * Exception when Invoice is not found
+ *
+ * @author Gilbert Lauren
+ * @version 06/28/2021
+ */
 public class InvoiceNotFoundExecption extends Exception {
     private int invoice_error;
 

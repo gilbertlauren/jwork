@@ -1,8 +1,9 @@
 package gilbertlauren.jwork;
 /**
- * Merupakan file class untuk Bonus
+ * Define a bonus to be applicable using Referral Code
+ *
  * @author Gilbert Lauren
- * @version 1 April 2021
+ * @version 04/01/2021
  */
 public class Bonus
 {
@@ -12,7 +13,14 @@ public class Bonus
     private int minTotalFee;
     private boolean active;
     /**
-     * Constructor for objects of class Bonus
+     * Constructor of Bonus Class
+     *
+     * @param id           ID of Bonus
+     * @param referralCode Referral Code of Bonus
+     * @param extraFee     Extra fee of Bonus
+     * @param minTotalFee  Minimal Total Fee class of Bonus
+     * @param active       Boolean value for Bonus's availablility
+     * @see Jobseeker
      */
     public Bonus(int id, String referralCode, int extraFee, int minTotalFee, boolean active){
         this.id = id;
@@ -22,78 +30,87 @@ public class Bonus
         this.active = active;
     }
     /**
-     * merupakan getter Id dari Bonus
-     * @return id
+     * Accessor of field "id" in Bonus Class
+     *
+     * @return int returns the id of an Bonus
      */
     public int getId (){
         return id;
     }
     /**
-     * merupakan getter ReferralCode dari Bonus
-     * @return id
+     * Accessor of field "referralCode" in Bonus Class
+     *
+     * @return String returns the referral code of an Bonus
      */
     public String getReferralCode (){
         return referralCode;
     }
     /**
-     * merupakan getter ExtraFee dari Bonus
-     * @return id
+     * Accessor of field "extraFee" in Bonus Class
+     *
+     * @return int returns the extra fee of an Bonus
      */
     public int getExtraFee (){
         return extraFee;
     }
     /**
-     * merupakan getter MinTotalFee dari Bonus
-     * @return id
+     * Accessor of field "minTotalFee" in Bonus Class
+     *
+     * @return int returns the minimum total fee of an Bonus
      */
     public int getMinTotalFee (){
         return minTotalFee;
     }
     /**
-     * merupakan getter Active dari Bonus
-     * @return id
+     * Accessor of field "active" in Bonus Class
+     *
+     * @return boolean returns wheter Bonus is available or not
      */
     public boolean getActive (){
         return active;
     }
     /**
-     * merupakan setter Id dari Bonus
-     * @param id
+     * Mutator of field "id" in Bonus Class
+     *
+     * @param id ID of a Bonus
      */
     public void setId(int id) {
         this.id = id;
     }
     /**
-     * merupakan setter ReferralCode dari Bonus
-     * @param id
+     * Mutator of field "referralCode" in Bonus Class
+     *
+     * @param referralCode the referral code of a Bonus
      */
     public void setReferralCode(String referralCode) {
         this.referralCode = referralCode;
     }
     /**
-     * merupakan setter ExtraFee dari Bonus
-     * @param id
+     * Mutator of field "extraFee" in Bonus Class
+     *
+     * @param extraFee the extra fee of a Bonus
      */
     public void setExtraFee(int extraFee) {
         this.extraFee = extraFee;
     }
     /**
-     * merupakan setter MinTotalFee dari Bonus
-     * @param id
+     * Mutator of field "minTotalFee" in Bonus Class
+     *
+     * @param minTotalFee the minimal total fee of a Bonus
      */
     public void setMinTotalFee(int minTotalFee) {
         this.minTotalFee = minTotalFee;
     }
     /**
-     * merupakan setter Active dari Bonus
-     * @param id
+     * Mutator of field "active"  in Invoice Class
+     *
+     * @param active wheter Bonus is available or not
      */
     public void setActive(boolean active) {
         this.active = active;
     }
     /**
-     * method untuk print dari Invoice
-     * outputnya adalah berupa jumlah gaji
+     * Prints out the data of Bonus
      */
     //public void printData() {
     //    System.out.println("ID :" + getId());

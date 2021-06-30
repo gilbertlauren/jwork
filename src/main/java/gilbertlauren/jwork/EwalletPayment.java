@@ -3,53 +3,72 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
- * Merupakan file subclass untuk Invoice
+ * Subclass of Invoice, defining payment using E-Wallet
+ *
  * @author Gilbert Lauren
- * @version 1 April 2021
+ * @version 04/01/2021
  */
 public class EwalletPayment extends Invoice {
     private static final PaymentType PAYMENT_TYPE = PaymentType.EwalletPayment;
     private Bonus bonus;
 
     /**
-     * Constructor for objects of class EwalletPayment
+     * Constructor of EwalletPayment Class (subclass of Invoice)
+     *
+     * @param id        id of Invoice
+     * @param jobs      Job's id of Invoice
+     * @param jobseeker Jobseeker class of Invoice
+     * @see Jobseeker
+     * @see Invoice
      */
     public EwalletPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker) {
         super(id, jobs, jobseeker);
     }
 
+    /**
+     * Constructor of EwalletPayment Class (subclass of Invoice) with Bonus
+     *
+     * @param id        id of Invoice
+     * @param jobs      Job's id of Invoice
+     * @param jobseeker Jobseeker class of Invoice
+     * @param bonus     Bonus class of Invoice
+     * @see Jobseeker
+     * @see Invoice
+     */
     public EwalletPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker, Bonus bonus) {
         super(id, jobs, jobseeker);
         this.bonus = bonus;
     }
 
     /**
-     * merupakan getter getPaymentType dari EwalletPayment
+     * Accessor of PAYMENT_TYPE in EwalletPayment Class
      *
-     * @return PAYMENT_TYPE
+     * @return Bonus returns the type of payment (EwalletPayment)
      */
     public PaymentType getPaymentType() {
         return PAYMENT_TYPE;
     }
 
     /**
-     * merupakan getter getBonus dari EwalletPayment
+     * Accessor of field "bonus" in EwalletPayment Class
      *
-     * @return bonus
+     * @return Bonus returns the bonus class of an Invoice with EwalletPayment type
      */
     public Bonus getBonus() {
         return bonus;
     }
 
     /**
-     * merupakan setter Bonus dari EwalletPayment
+     * Mutator of field "bonus" in EwalletPayment Class
      *
-     * @param bonus
+     * @param bonus new Bonus for an Invoice with EwalletPayment type
      */
     public void setBonus(Bonus bonus) {
         this.bonus = bonus;
     }
-
+    /**
+     * Set the value of totalFee, determined by the existance of bonus and whether the bonus is applicaple
+     */
     public void setTotalFee() {
         for (Job job : getJobs()){
             if (bonus != null) {
@@ -61,6 +80,9 @@ public class EwalletPayment extends Invoice {
             }
         }
     }
+    /**
+     * Prints out the data of Invoice, include Referral Code when applicable
+     */
     public String toString() {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy");
         String listJobs = "";

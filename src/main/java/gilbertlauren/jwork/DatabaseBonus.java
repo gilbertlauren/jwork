@@ -2,9 +2,10 @@ package gilbertlauren.jwork;
 import java.util.ArrayList;
 
 /**
- * Merupakan file class untuk DatabaseBonus
+ * Contains the list of Bonuses available.
+ *
  * @author Gilbert Lauren
- * @version 1 April 2021
+ * @version 04/01/2021
  */
 public class DatabaseBonus {
     private static ArrayList<Bonus> BONUS_DATABASE = new ArrayList<>();
@@ -58,6 +59,11 @@ public class DatabaseBonus {
         }
         return false;
     }
+    /**
+     * Add a Bonus in DatabaseBonus Class
+     *
+     * @return boolean false
+     */
     public static boolean addBonus(Bonus bonus) throws ReferralCodeAlreadyExistsException {
             for (Bonus bonusList: BONUS_DATABASE) {
                 if (bonusList.getReferralCode().equals(bonus.getReferralCode())) {
@@ -68,6 +74,11 @@ public class DatabaseBonus {
             lastId = bonus.getId();
             return true;
         }
+    /**
+     * Remove a Bonus in DatabaseBonus Class
+     *
+     * @return boolean false
+     */
     public static boolean removeBonus(int id) throws BonusNotFoundException{
         for (Bonus bonus : BONUS_DATABASE) {
             if (bonus.getId() == id) {

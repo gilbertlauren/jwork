@@ -1,4 +1,8 @@
 package gilbertlauren.jwork;
+
+/**
+ * Class for testing MultiThread
+ */
 public class FeeCalculator extends Thread implements Runnable{
     private Invoice input;
     public FeeCalculator(Invoice invoice) {
